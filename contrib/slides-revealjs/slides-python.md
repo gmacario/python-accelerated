@@ -658,7 +658,7 @@ TODO: image
 ### Notable Modules (2)
 
 * Warnings that alert the user of some important condition that doesn't warrant raising an exception and terminating the program (e.g., uses of a obsolete feature)
-* Caveat: `logging` vs. `warnings` 
+* Caveat: `logging` vs. `warnings`
 
   ```python
   TODO
