@@ -4,16 +4,16 @@ transition: "slide"
 highlightTheme: "monokai"
 logoImg: "resources/3584783.png"
 slideNumber: false
-title: "Python -- The Hard Way"
+title: "Python -- Accelerated"
 ---
 
-## Python -- <small>The Hard Way</small>{style=background:blue}
+## Python -- Accelerated
 
 ---
 
 ---
 
-## PYTHON -- The Hard Way
+## PYTHON -- Accelerated
 
 ::: block
 <small>
@@ -30,7 +30,7 @@ These files are offered as-is, without any warranty.
 
 ::: block
 <small>{style=background:grey}
-September 2021 - draft version 0.2
+September 2021 - draft version 0.3
 </small>
 :::
 
@@ -42,7 +42,7 @@ TODO
 
 ---
 
-### Why "the Hard Way"?
+### Why "Accelerated"?
 
 TODO
 
@@ -239,7 +239,7 @@ TODO
 
 ---
 
-### Pytonic Approach
+### Pythonic Approach
 
 TODO
 
@@ -469,13 +469,13 @@ TODO
 
 ---
 
-### `args` and `**kargs**`
+### `*args` and `**kargs`
 
 TODO
 
 ---
 
-### `args` and `**kargs**` (2)
+### `*args` and `**kargs` (2)
 
 TODO
 
@@ -496,7 +496,7 @@ TODO
 
 ---
 
-### Lambda Expressions
+### Lambda Keyword
 
 * Lambda expressions are short (1 line), usually simple,
   and anonymous functions. They can be used to calculate values
@@ -519,7 +519,7 @@ TODO
 
 ---
 
-### Lambda Expressions (2)
+### Lambda Keyword (2)
 
 * Lambda expressions are quite useful to define simple,
   scratch functions to be used as argument in behavioral
@@ -629,7 +629,14 @@ TODO: image
 * Names in modules can be imported in several ways
 
   ```python
-  TODO
+  import math
+  print(math.sqrt(2))
+  ```
+
+  ```python
+  from math import sqrt
+  from cmath import sqrt as C_sqrt
+  print(sqrt(2), c_sqrt(-2))
   ```
 
 ---
@@ -637,6 +644,12 @@ TODO: image
 ### Notable Modules
 
   ```python
+  import logging
+  logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s: %(message)s',
+    datefmt='[%H:%M:%S]'
+  )
   TODO
   ```
 
@@ -644,7 +657,8 @@ TODO: image
 
 ### Notable Modules (2)
 
-* Mathematical functions, use `cmath` for complex numbers
+* Warnings that alert the user of some important condition that doesn't warrant raising an exception and terminating the program (e.g., uses of a obsolete feature)
+* Caveat: `logging` vs. `warnings` 
 
   ```python
   TODO
@@ -654,6 +668,16 @@ TODO: image
 
 ### Notable Modules (3)
 
+* Mathematical functions, use `cmath` for complex numbers
+
+  ```python
+  TODO
+  ```
+
+---
+
+### Notable Modules: `string` (4)
+
 * Common string operations and constants
 
   ```python
@@ -662,7 +686,7 @@ TODO: image
 
 ---
 
-### Notable Modules (4)
+### Notable Modules: (5)
 
 * Various time-related functions
 
@@ -672,7 +696,7 @@ TODO: image
 
 ---
 
-### Notable Modules: `time` (5)
+### Notable Modules: `time` (6)
 
 * `perf_counter` / `perf_counter_ns`
   - Clock with the highest available resolution to measure
@@ -688,15 +712,26 @@ TODO: image
 
 ---
 
-### Notable Modules: `time` (6)
+### Notable Modules: `time` (7)
 
-* `sleep`
-  - Suspend execution of the calling thread for the
-    given number of seconds.
+* Measure performances:
+  - Use `process_time` in a script
+  - Use `%timeit` in a notebook
+
+  ```python
+  %timeit fibonacci_numbers = [n for n, _ in zip(fibonacci(), range(100))]
+  ```
 
 ---
 
-### Notable Modules: (7)
+### Notable Modules: `time` (8)
+
+* `sleep`
+  - Suspend execution of the calling thread for the given number of seconds.
+
+---
+
+### Notable Modules: (9)
 
 * Data pretty printer, sometimes a good replacement
   for `print`
@@ -709,7 +744,7 @@ TODO: image
 
 ---
 
-### Notable Modules: (8)
+### Notable Modules: (10)
 
 * Miscellaneous operating system interfaces
 
@@ -719,7 +754,7 @@ TODO: image
 
 ---
 
-### Notable Modules: (9)
+### Notable Modules: (11)
 
 * System-specific parameters and functions
 
@@ -729,7 +764,7 @@ TODO: image
 
 ---
 
-### Notable Modules: (10)
+### Notable Modules: (12)
 
 * Regular expression operations
 
@@ -739,7 +774,7 @@ TODO: image
 
 ---
 
-### Notable Modules: (11)
+### Notable Modules: (13)
 
 * Real Python programmers do not love double loops
 * Use `itertools` for efficient looping
@@ -765,7 +800,7 @@ TODO: image
 
 ---
 
-### Notable Modules: (13)
+### Notable Modules: (15)
 
 * The module `collection` contains specialized
   container datatypes providing alternatives to
@@ -793,7 +828,7 @@ TODO: image
 
 ---
 
-### Notable Modules: (15)
+### Notable Modules: (17)
 
 * Generate pseudo-random numbers
 
@@ -887,6 +922,18 @@ TODO: image
 
   - The files may also be imported writing appropriate
     `import` instructions in `__init.py`
+
+---
+
+### User Modules (3)
+
+* Several alternatives, with obscure, yet important differences
+
+  ```python
+  TODO
+  ```
+
+* ... and even more alternatives
 
 ---
 
@@ -1298,10 +1345,6 @@ TODO
 ### Dialog Windows (3)
 
 * `colorchooser` (return both the RGB components and the color hex code)
-
----
-
-## == TODO ==
 
 ---
 
