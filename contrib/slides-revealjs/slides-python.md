@@ -40,7 +40,7 @@ September 2021 - draft version 0.4
 
 * High-level programming language, truly portable
 * Actively developed, open-source and community-driven
-* Batteries included, huge code base
+* Batteries included, huge codebase
 * Steep learning curve, easy to learn and to use
 * Powerful as a scripting language
 * Support both programming in the large and in the small
@@ -75,7 +75,7 @@ TODO: image
   - <https://stackoverflow.com/questions/tagged/python>
   - <https://www.google.com/search?q=pyhton>
   - <https://pythontutor.com>
-* Course repo
+* Course repository
   - <https://github.com/squillero/python-accelerated>
 
 ---
@@ -87,7 +87,7 @@ TODO: image
 * On Linux
   - Get the default package from the distro
   - The use **Virtualenv** (<https://virtualenv.pypa.io>)
-* On Windows and MacOS
+* On Windows and macOS
   - Install **Anaconda** (<https://www.anaconda.com/products/individual>)
   - If size is a **real** issue, also consider **micromamba**
 * If everything else fail
@@ -1127,7 +1127,7 @@ TODO: image
 
 ### Assert
 
-* Check specific conditions at run-time
+* Check specific conditions at runtime
 
 * Ignored if compiler is optimizing (`-O` or `-OO`)
 
@@ -1432,7 +1432,7 @@ TODO
 
 ### Dialog Windows
 
-* `filedialog` (return file names as strings)
+* `filedialog` (return filenames as strings)
   - `askopenfilename` / `askopenfilenames`
   - `asksaveasfilename`
   - `askdirectory`
