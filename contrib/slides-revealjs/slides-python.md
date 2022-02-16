@@ -28,9 +28,9 @@ These files are offered as-is, without any warranty.
 </small>
 :::
 
-::: block
-<small>{style=background:grey}
-September 2021 - draft version 0.3
+::: block{align=left}
+<small style="background:grey">
+September 2021 - draft version 0.4
 </small>
 :::
 
@@ -38,25 +38,25 @@ September 2021 - draft version 0.3
 
 ## Why Python?
 
-TODO
+* High-level programming language, truly portable
+* Actively developed, open-source and community-driven
+* Batteries included, huge code base
+* Steep learning curve, easy to learn and to use
+* Powerful as a scripting language
+* Support both programming in the large and in the small
+* Can be used interactively
+* De-facto standard in some domain (e.g., data science)
 
 ---
 
 ### Why "Accelerated"?
 
-TODO
-
----
-
-### Who is this Giovanni Squillero, anyway?
-
-TODO
-
----
-
-### How to get in touch
-
-TODO: image(Google, Telegram, email)
+* No-nonsense Python for programmers (in a C-like language)
+* Only 5 full days
+* Not a _gentle introduction_
+* No the usual _Dummy's guide to..._
+* And no reference to Objects<br>
+  (although OO in Python is **beautiful**)
 
 ---
 
@@ -68,135 +68,244 @@ TODO: image
 
 ### Material
 
-TODO
+* Official online documentation
+  - <https://docs.python.org/3/>
+  - <https://www.python.org/dev/peps/>
+* Spare online resources
+  - <https://stackoverflow.com/questions/tagged/python>
+  - <https://www.google.com/search?q=pyhton>
+  - <https://pythontutor.com>
+* Course repo
+  - <https://github.com/squillero/python-accelerated>
 
 ---
 
 ### Getting Python
 
-TODO
+* Official Python downloads
+  - <https://www.python.org/downloads/>
+* On Linux
+  - Get the default package from the distro
+  - The use **Virtualenv** (<https://virtualenv.pypa.io>)
+* On Windows and MacOS
+  - Install **Anaconda** (<https://www.anaconda.com/products/individual>)
+  - If size is a **real** issue, also consider **micromamba**
+* If everything else fail
+  - Try **ActivePython** (<https://www.activestate.com/products/python>)
 
 ---
 
 ### Getting Python (2)
 
-TODO
+* Let's test Python calculating the 17^th Mersenne prime
+  
+TODO:code
 
 ---
 
 ### IDE
 
-TODO
+* Install Visual Studio Code and the Python Extension
+
+TODO:screenshot
 
 ---
 
 ### Visual Studio Code + Anaconda
 
-TODO
+* When Visual Studio Code is used with Anaconda, specifying the correct path may be useful
+* Open "Settings", search for "conda"
+
+TODO:screenshot
 
 ---
 
 ### Open a "directory"
 
-TODO
+TODO:screenshot
 
 ---
 
 ### Set interpreter and Press play
 
-TODO
+TODO:screenshots
 
 ---
 
 ### Kick off
 
-TODO
+TODO:screenshot
 
 ---
 
 ### Jupyter Notebook
 
-TODO
+Name ends in `.pynb`
+
+TODO:screenshot
 
 ---
 
 ### My first notebook
 
-TODO
+TODO:screenshots
 
 ---
 
 ### Execution order
 
-TODO
+TODO:screenshot
 
 ---
 
 ## == Data Types ==
 
+TODO:image
+
 ---
 
 ### Data Model
 
-TODO
+* Python is a **strongly-typed**, **dynamic**, **object-oriented** language
+  - Objects are Python's abstraction for data
+  - Code is also represented by objects
+  - Every object has an **identity**
+    - The identity never changes once it has been created -- `is`, `id()`
+  - Every object has a **type** and a **value**
 
 ---
 
-### Object Oriented Paradigm (in 1 slide)
+### Object Oriented Paradigm (in **1** slide)
 
-TODO
+* An **object** contains both **data** and **code**
+* An object is the instance of a **class** (class <--> type)
+* Subclass hierarchy
+  - A class **inherits** the structure from its parent(s)
+  - The child class may **add** or **specialize** features
+  - `IsInstance(x, Car)` is `True` if `x` is a `Petrol`
+* **Polymorphism**
+  - caller ignores which class in the supported hierarchy it is operating on
+
+TODO:diagrams
 
 ---
 
 ### Naming and Binding
 
-TODO
+* Names refer to objects<br>
+  `foo = 42`<br>
+  `foo` is a name (not a "variable")
+* The scope defines the visibility of a name
+* When a name is used, it is resolved using the nearest enclosing scope
+
+TODO:diagram
 
 ---
 
 ### Standard Type Hierarchy
 
-TODO
+* Number
+  - Integral
+    - Integers (`int`)
+    - Booleans (`bool`)
+  - Real (`float`)
+  - Complex (`complex`)
+* Caveat:
+  - Numbers are **immutable**
+
+```python
+foo = 42
+bar = True
+baz = 4.2
+qux = 4+2j
+```
 
 ---
 
 ### Standard Type Hierarchy (2)
 
-TODO
+* Sequences
+  - Immutable
+    - String (`str`)
+    - Tuples (`tuple`)
+    - Bytes (`bytes`)
+  - Real (`float`)
+  - Mutable
+    - Lists (`list`)
+    - Byte Arrays (`bytearray`)
+
+```python
+foo = 42
+bar = (4, 2)
+baz = bytearray([0x04, 0x02])
+qux = [4, 2]
+tud = b'\x04\x02'
+```
 
 ---
 
 ### Standard Type Hierarchy (3)
 
-TODO
+* **Mutable** Sequences vs. **Immutable** Sequences
+
+TODO:photo
 
 ---
 
 ### Standard Type Hierarchy (4)
 
-TODO
+* Set Types
+  - Sets (`set`)
+  - Frozen Sets (`frozenset`)
+* Caveat:
+  - Sets are **mutable**, frozen sets are **immutable**
+
+```python
+foo = {4, 2}
+baz = frozenset({4, 2})
+```
 
 ---
 
 ### Standard Type Hierarchy (5)
 
-TODO
+* Mappings
+  - Dictionaries (`dics`)
+
+```python
+foo = {'Giovanni':23, 'Paola':18}
+```
 
 ---
 
 ### Standard Type Hierarchy (6)
 
-TODO
+* None (`NoneType`)
+
+```python
+foo = None
+```
 
 ---
 
 ### Standard Type Hierarchy (7)
 
-TODO
+* NotImplemented
+* Ellipsis (...)
+* Callable types
+* Modules
+* Custom classes
+* Class instances
+* I/O objects
+* Internal types
+
+TODO:Photo
 
 ---
 
 ## == Basic Syntax ==
+
+TODO:Photo
 
 ---
 
