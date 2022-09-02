@@ -270,7 +270,7 @@ baz = frozenset({4, 2})
 ### Standard Type Hierarchy (5)
 
 * Mappings
-  - Dictionaries (`dics`)
+  - Dictionaries (`dict`)
 
 ```python
 foo = {'Giovanni':23, 'Paola':18}
@@ -311,13 +311,35 @@ TODO:Photo
 
 ### Style (TL;DR)
 
-TODO
+* `module_name`
+* `package_name`
+* `ClassName`
+* `method_name`
+* `ExceptionName`
+* `function_name`
+* `GLOBAL_CONSTANT_NAME`
+* `global_var_name`
+* `instance_var_name`
+* `function_parameter_name`
+* `local_var_name`
+
+TODO:Photo
+
+<https://github.com/squillero/style>
 
 ---
 
 ### Style
 
-TODO
+* Source file is UTF-8, all Unicode runes can be used
+* Single underscore is a valid name (`_`)
+* Safe rule:
+  - Use only printable standard ASCII characters for names
+  - Don't start names with single/double underscore unless your really know what you are dogin
+  - Append an underscore not to clash with keywords or common names,
+    e.g. `int_` and `list_`
+
+TODO:Example
 
 ---
 
@@ -326,37 +348,63 @@ TODO
 * Use an automatic formatter
   - Suggested: `yapf` or `autopep8` or `black`
 
-TODO
+Relevant VSCode configuration entries:
+
+> **Python > Formatting: Provider**
+> - Provider for formatting.
+>   Possible options include 'autopep8', 'black', and 'yapf'.
+> - `yapf`
+>
+> **Python > Formatting: Yapf Args**
+> - Arguments passed in.
+>   Each argument is a separate item in the array.
+> - `--style` (based on style: google,
+>   column_limit=100, blank_line_before_module_docstring=true)
 
 ---
 
 ### Style:  `black` vs  `yapf`
 
-TODO
+TODO:Screenshots
 
 ---
 
 ### Comments
 
-TODO
+* Comments starts with hash (`#`) and ends with the line
+* (Multi-line) (doc)strings might be used to comment/document
+  the code in specific context
+
+TODO:Screenshot
 
 ---
 
 ### Basic I/O: `print`
 
-TODO
+Type `print(` in Visual Studio Code and wait for help
+
+TODO:Screenshot
 
 ---
 
 ### Pythonic Approach
 
-TODO
+* Functions are simple and straightforward
+* Specific "named arguments" can be optionally used
+  to tweak the behavior
+
+```python
+print("Foo", "Bar")
+print("Foo", "Bar", file=sys.stderr, sep='|')
+```
 
 ---
 
 ### Basic I/O: `input`
 
-TODO
+Type `input(` in Visual Studio Code and wait for help
+
+TODO:Screenshot
 
 ---
 
